@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Qoute Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+      body {
+        background-color: pink;
+        padding: 40px;
+        font-family: Arial, Sans-Serif;
+        text-align: center;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 15px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      #qoute {
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      .box {
+        background-color: white;
+        padding: 30px;
+        border-radius: 15px;
+        width: 80%;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Qoute Generator</h1>
+      <p id="qoute">Click button to get a motivational qoute.</p>
+      <button onclick="generateQoute()">New Qoute</button>
+    </div>
+    <script>
+      function generateQoute() {
+        let qoutes = [
+          "Displine builds champions.",
+          "Small progress is still progress.",
+          "Stay consistent even when its hard.",
+          "Winners train, losers complain.",
+          "Your future is built daily.",
+          "Dream big, work Bigger.",
+          "Pressure create diamonds."
+          
+          ];
+          let randomIndex =
+          Math.floor(Math.random() *
+          qoutes.length);
+          document.getElementById("qoute").innerText = qoutes[randomIndex];
+      }
+    </script>
+  </body>
+</html>
